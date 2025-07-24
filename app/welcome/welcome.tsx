@@ -5,7 +5,6 @@ import {
   Button,
   Link, // Using MUI Link for navigation
 } from "@mui/material";
-import useCounterStore from "~/stores/counter";
 // Assuming @fontsource/roboto is imported globally in your main entry file (e.g., main.tsx)
 // import '@fontsource/roboto/300.css';
 // import '@fontsource/roboto/400.css';
@@ -13,7 +12,6 @@ import useCounterStore from "~/stores/counter";
 // import '@fontsource/roboto/700.css';
 
 export function Welcome() {
-    const {count, increment} = useCounterStore();
   return (
     <Box
       sx={{
@@ -112,6 +110,7 @@ export function Welcome() {
 
                 <Button
                   variant="contained"
+                  href="/carCollection"
                   sx={{
                     minWidth: 84,
                     maxWidth: 480,
@@ -129,9 +128,8 @@ export function Welcome() {
                       boxShadow: "none",
                     },
                   }}
-                  onClick={increment}
                 >
-                  Explore Our Collection     {count}
+                  Explore Our Collection
                 </Button>
               </Box>
             </Box>
@@ -176,7 +174,7 @@ export function Welcome() {
                   Contact Us
                 </Link>
                 <Link
-                  href="#"
+                  href="/about"
                   sx={{
                     color: "#887063",
                     fontSize: "1rem",
